@@ -57,7 +57,7 @@ def register_blueprints(app):
     app.register_blueprint(module.blueprint)
 
 template_dir = os.path.dirname(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
-template_dir = os.path.join(template_dir, 'test_flask', 'templates')
+template_dir = os.path.join(template_dir, 'emotion_predictor', 'templates')
 
 app = Flask(__name__, template_folder=template_dir)
 tokenizer = init_tokenizer()
