@@ -29,7 +29,20 @@
    <br>
    <h4> <p class="text-center text-capitalize">{{ sentence_text }}</p> </h4>
    <h5> <p class="text-center text-capitalize">{{ opening_text }}</p> </h5>
-   <h2> <p class="text-center text-capitalize">{{ prediction_text }}</p> </h2>
+   
+   <h2>
+	{% if prediction_text == "joy" %} 
+     <p style = "color:Gold;" class="text-center"> {{prediction_text}} </p>
+	{% elif prediction_text =="anger"%}
+     <p style = "color:FireBrick;" class="text-center"> {{prediction_text}} </p>
+	{% elif prediction_text == "love" %} 
+     <p style = "color:HotPink;" class="text-center text-capitalize"> {{prediction_text}} </p>
+	{% elif prediction_text =="sadness"%}
+     <p style = "color:PaleTurquoise;" class="text-center text-capitalize"> {{prediction_text}} </p>
+	{% else %}
+     <p style = "color:DarkSlateBlue;" class="text-center text-capitalize"> {{prediction_text}} </p>
+	{% endif %}
+   </h2>
    <h5> <p class="text-center">{{ reply_text }}</p> </h5>
  </div>
 
