@@ -26,3 +26,17 @@ def predictor(sentence):
 def response(predicted_emo, index):
     reply = response_dict[predicted_emo][index]
     return reply
+    
+def emotion_color(predicted_emo):
+    if predicted_emo =='joy':
+        response_color = '"color:Gold;"'
+    elif predicted_emo =='anger':
+        response_color = '"color:FireBrick;"'
+    elif predicted_emo =='love':
+        response_color = '"color:HotPink;"'
+    elif predicted_emo =='sadness':
+        response_color = '"color:PaleTurquoise;"'
+    else:
+        response_color = '"color:DarkSlateBlue;"'
+    return response_color
+   

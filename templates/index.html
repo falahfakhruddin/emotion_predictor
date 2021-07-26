@@ -8,28 +8,29 @@
 <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-  
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body>
- <div class="login">
+ <div class="p-3 mb-2 bg-primary text-white">
 	<h1>Emotion Analysis</h1>
+	<br>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict_emo')}}"method="post">
-    	<input type="text" name="sentence" placeholder="Tell Me Your Story" required="required" />
+    	<input type="text" class="form-control form-control-lg" name="sentence" placeholder="Tell Me Your Story" style="text-align:center;" required="required" />
         
-        <button type="submit" class="btn btn-primary btn-block btn-large">Check</button>
+		<br>
+		
+        <button type="submit" class="btn btn-success btn-block btn-large">Check</button>
     </form>
 
    <br>
    <br>
-   {{ sentence_text }} <br>
-   {{ opening_text }} <br>
-   {{ prediction_text }} <br>
-   {{ reply_text }}
-
+   <h4> <p class="text-center text-capitalize">{{ sentence_text }}</p> </h4>
+   <h5> <p class="text-center text-capitalize">{{ opening_text }}</p> </h5>
+   <h2> <p class="text-center text-capitalize">{{ prediction_text }}</p> </h2>
+   <h5> <p class="text-center">{{ reply_text }}</p> </h5>
  </div>
 
 
