@@ -56,10 +56,8 @@ def register_blueprints(app):
     module = import_module('app.{}.routes'.format(module_name))
     app.register_blueprint(module.blueprint)
 
-template_dir = os.path.dirname(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
-template_dir = os.path.join(template_dir, 'emotion_predictor', 'templates')
 
-app = Flask(__name__, template_folder=template_dir)
+app = Flask(__name__)
 tokenizer = init_tokenizer()
 model = init_model()
 response_dict = init_response()

@@ -27,14 +27,14 @@
 
    <br>
    <br>
-   <h4> <p class="text-center text-capitalize">{{ sentence_text }}</p> </h4>
-   <h5> <p class="text-center text-capitalize">{{ opening_text }}</p> </h5>
+   <h4> <p class="text-center">{{ sentence_text }}</p> </h4>
+   <h5> <p class="text-center">{{ opening_text }}</p> </h5>
    
    <h2>
 	{% if prediction_text == "joy" %} 
-     <p style = "color:Gold;" class="text-center"> {{prediction_text}} </p>
+     <p style = "color:Gold;" class="text-center text-capitalize"> {{prediction_text}} </p>
 	{% elif prediction_text =="anger"%}
-     <p style = "color:FireBrick;" class="text-center"> {{prediction_text}} </p>
+     <p style = "color:FireBrick;" class="text-center text-capitalize"> {{prediction_text}} </p>
 	{% elif prediction_text == "love" %} 
      <p style = "color:HotPink;" class="text-center text-capitalize"> {{prediction_text}} </p>
 	{% elif prediction_text =="sadness"%}
