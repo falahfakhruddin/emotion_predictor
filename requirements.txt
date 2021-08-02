@@ -1,6 +1,6 @@
 flask
 pandas
-numpy
+numpy==1.19.2
 tensorflow-cpu
 pickle-mixin
 gunicorn
