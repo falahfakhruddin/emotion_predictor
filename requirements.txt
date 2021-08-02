@@ -3,3 +3,4 @@ pandas
 tensorflow-cpu
 pickle-mixin
 gunicorn
+numpy==1.19.2
